@@ -5,7 +5,7 @@ export default function Cronologia() {
     const titulo: string = "CONFLICTO TCB-MILITARES: JURISDICCIÓN ORDINARIA VS JURISDICCIÓN MILITAR";
     const autor: string = "NEYER ZAPATA VASQUEZ";
     const fecha: string = "26/05/2024";
-    const recurso: string = "/documentos/cronologia_ejm.pdf";
+    const recurso: string = "/files/cronologia_ejm.pdf";
     const analisis: number = 1;
 
     return (
