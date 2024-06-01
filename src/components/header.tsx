@@ -42,28 +42,29 @@ const Header = () => {
             </div>
           </div>
           <div
-            className="flex  space-x-10 "
+            className="flex  space-x-10  "
             style={{
               fontFamily: "Montserrat, Helvetica, Arial, sans-serif",
               fontWeight: "600",
               color: "white",
               fontSize: "80%",
+              height: "100%"
             }}
           >
-            <Link href="/" className="grow text-white hover:text-gray-400 " >
+            <Link href="/" className="grow text-white  link hover:text-gray-400 " >
               Inicio
             </Link>
-            <Link href="/about" className="text-white hover:text-gray-400">
+            <Link href="/about" className="text-white link hover:text-gray-400">
               Archivo
             </Link>
-            <Link href="/about" className="text-white hover:text-gray-400">
+            <Link href="/about" className="text-white link hover:text-gray-400">
               Cronologias
             </Link>
 
-            <Link href="/about" className="text-white hover:text-gray-400">
+            <Link href="/about" className="text-white link hover:text-gray-400">
               Samed
             </Link>
-            <Link href="/contact" className="text-white hover:text-gray-400">
+            <Link href="/contact" className="text-white link hover:text-gray-400">
               IIJP
             </Link>
           </div>
