@@ -30,7 +30,7 @@ const Footer = () => {
             height={30}
           />
           <p className="ml-2 font-bold ">
-            DERECHOS RESERVADOS © 2002 {" "}
+            DERECHOS RESERVADOS © 2024 {" "}
             <a
               href="https://www.umss.edu.bo/"
               target="_blank"
