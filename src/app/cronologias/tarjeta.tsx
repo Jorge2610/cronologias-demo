@@ -12,7 +12,7 @@ export default function Tarjeta({data}:{data:TarjetaProps}){
         <div className="p-2 justify-center flex ">
             <div className="pr-5">
                 <Image 
-                src={"/documentos/portada.png"} 
+                src={"/files/portada.png"} 
                 alt="Portada"
                 className="shadow"
                 width={200}
