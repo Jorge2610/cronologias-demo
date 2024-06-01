@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Cronologia() {
+export default function Cronologia({ params } : { params : { cronologia : string}}) {
 
     const titulo: string = "CONFLICTO TCB-MILITARES: JURISDICCIÓN ORDINARIA VS JURISDICCIÓN MILITAR";
     const autor: string = "NEYER ZAPATA VASQUEZ";
@@ -9,22 +9,22 @@ export default function Cronologia() {
     const analisis: number = 1;
 
     return (
-        <div className="container mx-auto">
-            <div>
+        <div className="sm:container sm:mx-auto mb-2.5">
+            <div className='pt-2.5'>
                 <h1 className="text-2xl">{titulo}</h1>
                 <div className="inline">
                     <span className="material-symbols-outlined align-middle">person</span>
                     <span className="align-middle ms-2">{autor}</span>
                 </div>
-                <div className="inline ms-10">
+                <div className="sm:inline sm:ms-10">
                     <span className="material-symbols-outlined align-middle">event</span>
                     <span className="align-middle ms-2">{fecha}</span>
                 </div>
             </div>
             <hr className="border border-[#6B2236] my-2.5" />
-            <div className="flex">
-                <iframe src={recurso} className="w-3/4 h-[750px]"></iframe>
-                <div className="w-1/4 ms-2.5">
+            <div className="flex flex-col sm:flex-row">
+                <iframe src={recurso} className="mx-auto w-[350px] sm:w-3/4 h-[490px] sm:h-[730px]"></iframe>
+                <div className="w-[350px] sm:min-w-[270px] ms-2.5 mt-2.5 sm:mt-0">
                     <h2 className="text-xl mb-2.5">Documentos de análisis ({analisis})</h2>
                     <Link href="https://pcbiol.posgrado.unam.mx/lineamientos-para-empastar-tesis-por-art%C3%ADculo.html" target='_blank'>
                         <div className="flex border border-[#6B2236] rounded h-[125px] hover:scale-[1.01] hover:cursor-pointer">
