@@ -31,9 +31,13 @@ export default function Tarjeta({data}:{data:TarjetaProps}){
                     <span>{data.resumen}</span>
                 </div>
                 <div className="flex mt-[20px]">
-                    <span className="mr-[30px]">{data.fecha.toLocaleDateString()}</span>
-                    <Link className=""href={{}}>
-                    Leer mas
+                    <span className="material-symbols-outlined">
+                        calendar_month
+                    </span>
+                    <span className="mr-[50px]">{data.fecha.toLocaleDateString()}</span>
+                    
+                    <Link className="text-red-700"href={{}}>
+                    Leer más...
                     </Link>
                 </div>
                 

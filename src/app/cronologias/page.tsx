@@ -126,7 +126,7 @@ export default function Cronologias () {
         <div className="container mx-auto">
             <div className="container py-5 justify-center flex flex-row " style={{width:"80%"}}>
                 <div className="flex align-middle items-center">
-                    <input className="w-[300px] border-2 appearance-none rounded-l-[10px] border-r-0 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline align-middle" 
+                    <input className="md:w-[300px] w-[200px] ml-[50px] border-2 appearance-none rounded-l-[10px] border-r-0 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline align-middle" 
                     id="barraBusqueda" 
                     ref={inputBarraBusqueda}
                     type="text" 
@@ -142,7 +142,7 @@ export default function Cronologias () {
                     </div>
                     
                 </div>
-                <select className="ml-[100px] border rounded-full px-[5px]" 
+                <select className="ml-[40px] md:ml-[100px] border rounded-lg px-[5px]" 
                   name="ordenador" 
                   ref={selectOrdenador}
                   onChange={()=>{ordenar()}}>
