@@ -23,6 +23,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
           rel="stylesheet"
         />
+        <link rel="icon" href="/logo.png" sizes="any" />
       </head>
       <body className={inter.className}>
         <Header />

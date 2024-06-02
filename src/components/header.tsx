@@ -54,17 +54,17 @@ const Header = () => {
             <Link href="/" className="grow text-white  link hover:text-gray-400 " >
               Inicio
             </Link>
-            <Link href="/about" className="text-white link hover:text-gray-400">
+            <Link href="/archivo" className="text-white link hover:text-gray-400">
               Archivo
             </Link>
-            <Link href="/about" className="text-white link hover:text-gray-400">
-              Cronologias
+            <Link href="/cronologias" className="text-white link hover:text-gray-400">
+              Cronologías
             </Link>
 
-            <Link href="/about" className="text-white link hover:text-gray-400">
+            <Link href="" className="text-white link hover:text-gray-400">
               Samed
             </Link>
-            <Link href="/contact" className="text-white link hover:text-gray-400">
+            <Link href="https://fcjyp.umss.edu.bo/investigacion/" className="text-white link hover:text-gray-400">
               IIJP
             </Link>
           </div>
