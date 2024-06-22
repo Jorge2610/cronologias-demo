@@ -7,7 +7,8 @@ export interface TarjetaProps {
     archivo: string,
     autor_a: string,
     fecha_a: string,
-    id: number
+    id: number,
+    db: string
 };
 
 export const dastosIniciales: TarjetaProps[] = [
@@ -25,7 +26,8 @@ export const dastosIniciales: TarjetaProps[] = [
         archivo: "",
         autor_a: "",
         fecha_a: "",
-        id: 1
+        id: 1,
+        db: "intermezzo_base_de_datos"
     },
     {
         titulo: "Némesis de Morales, o acerca de Luis Fernando Camacho",
@@ -36,7 +38,8 @@ export const dastosIniciales: TarjetaProps[] = [
         archivo: "",
         autor_a: "",
         fecha_a: "",
-        id: 2
+        id: 2,
+        db: "nemesis_base_de_datos"
     },
     {
         titulo: "EL TRIBUNAL CONSTITUCIONAL DE BOLIVIA Y SUS PRIMEROS MAGISTRADOS",
@@ -47,7 +50,8 @@ export const dastosIniciales: TarjetaProps[] = [
         archivo: "Vol1_analisis",
         autor_a: "Neyer Zapata Vázquez",
         fecha_a: "01/01/2021",
-        id: 3
+        id: 3,
+        db: ""
     },
     {
         titulo: "CONFLICTO TCB-MILITARES: JURISDICCIÓN ORDINARIA VS JURISDICCIÓN MILITAR",
@@ -58,7 +62,8 @@ export const dastosIniciales: TarjetaProps[] = [
         archivo: "Vol4_analisis",
         autor_a: "Anónimo",
         fecha_a: "Sin fecha",
-        id: 4
+        id: 4,
+        db: ""
     },
     {
         titulo: "CONFLICTO POR EL CENSO: COMITÉ CÍVICO SANTA CRUZ VS GOBIERNO (2022)",
@@ -69,6 +74,19 @@ export const dastosIniciales: TarjetaProps[] = [
         archivo: "",
         autor_a: "",
         fecha_a: "",
-        id: 5
+        id: 5,
+        db: ""
+    },
+    {
+        titulo: "II Fondioc Desfalco Millonario",
+        imagen: "/images/fondioc.png",
+        autor: "IIJP, Franklin Aspety Zambrana",
+        fecha: new Date('2024-4-25'),
+        resumen: `Desde el mal manejo de los recursos del Fondo Indígena, ... … a obras fantasma que ocasionaron un gran daño al Estado, … … a dirigentes recibiendo dinero del Fondioc en sus cuentas particulares,… … al millonario escándalo de corrupción en Bolivia,… … a la justicia inhumana y podrida sumisa al MAS, … … a la muerte de Marco A. Aramayo, principal denunciante del desfalco.`,
+        archivo: "",
+        autor_a: "",
+        fecha_a: "",
+        id: 6,
+        db: ""
     },
 ];

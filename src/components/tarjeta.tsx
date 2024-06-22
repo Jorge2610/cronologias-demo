@@ -20,7 +20,10 @@ export default function Tarjeta({ data }: { data: TarjetaProps }) {
                 </div>
                 <hr />
                 <div className="my-[20px] text-sm">
-                    <span >By {data.autor}</span>
+                    <div className="sm:inline">
+                        <span className="material-symbols-outlined align-middle">person</span>
+                        <span className="align-middle ms-2">{data.autor}</span>
+                    </div>
                 </div>
 
                 <div className="Resumen">
@@ -30,7 +33,7 @@ export default function Tarjeta({ data }: { data: TarjetaProps }) {
                     <span className="material-symbols-outlined">
                         calendar_month
                     </span>
-                    <span className="mr-[50px]">{data.fecha.toLocaleDateString()}</span>
+                    <span className="mr-[50px] ms-2">{data.fecha.toLocaleDateString()}</span>
 
                     <Link className="text-red-700" href={`/cronologias/${data.titulo.toLowerCase().replace(":", "").replaceAll(" ", "_")}?id=${data.id}`}>
                         Leer más...

@@ -65,7 +65,7 @@ export default function Cronologias() {
             id="barraBusqueda"
             ref={inputBarraBusqueda}
             type="text"
-            placeholder="buscar "
+            placeholder="Buscar..."
             onKeyDown={(event) => {
               if (event.key == "Enter")
                 busca();
@@ -77,7 +77,7 @@ export default function Cronologias() {
           </div>
 
         </div>
-        <select className="w-[150px] ml-[40px] md:ml-[50px] border rounded-lg px-[5px]"
+        <select className="w-[150px] ml-[40px] md:ml-[50px] border rounded-lg px-[15px]"
           name="ordenador"
           ref={selectOrdenador}
           onChange={() => { ordenar() }}>

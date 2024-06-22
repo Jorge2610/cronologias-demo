@@ -32,28 +32,44 @@ export default function Cronologia({ params }: { params: { cronologia: string } 
             <hr className="border border-[#6B2236] my-2.5" />
             <div className="flex flex-col sm:flex-row">
                 <iframe src={recurso} className="mx-auto w-[350px] sm:w-3/4 h-[490px] sm:h-[730px]"></iframe>
-                {data?.autor_a !== "" ?
-                    <div className="w-[350px] sm:min-w-[270px] ms-2.5 mt-2.5 sm:mt-0">
-                        <h2 className="text-xl mb-2.5">Documentos de análisis ({analisis})</h2>
-                        <div className="flex border-b border-[#6B2236]">
-                            <div className='w-[75%] ms-2 pb-2'>
-                                <div className='py-2'>
-                                    <span className="material-symbols-outlined align-middle">person</span>
-                                    <span className="align-middle ms-2">{data?.autor_a}</span>
-                                </div>
-                                <div className='pb-2.5'>
-                                    <span className="material-symbols-outlined align-middle">event</span>
-                                    <span className="align-middle ms-2">{fecha}</span>
-                                </div>
-                                <Link className='text-red-700' href={`/files/${data?.archivo}.pdf`} target='_blank'>Leer...</Link>
+                <div className="w-[350px] sm:min-w-[270px] ms-2.5 mt-2.5 sm:mt-0">
+                    {data?.db !== "" ?
+                        <>
+                            <div className="sm:inline">
+                                <span className="material-symbols-outlined align-middle">database</span>
+                                <span className="align-middle ms-2 text-xl">
+                                    Base de Datos:
+                                    <Link className='text-[#561427] ms-2' href={`/files/${data?.db}.pdf`} target='_blank' title='Ver'>
+                                        <span className="material-symbols-outlined align-middle">
+                                            visibility
+                                        </span>
+                                    </Link>
+                                </span>
                             </div>
-                            <div className='w-[25%]'>
-                                <Image src={`/images/${data?.archivo}.png`} alt="" className='border rounded' height={100} width={100}/>
-                            </div>
-                        </div>
-                    </div>
-                    :
-                    <></>}
+                        </>
+                        : data?.autor_a !== "" ?
+                            <>
+                                <h2 className="text-xl mb-2.5">Documentos de análisis ({analisis})</h2>
+                                <div className="flex border-b border-[#6B2236]">
+                                    <div className='w-[75%] ms-2 pb-2'>
+                                        <div className='py-2'>
+                                            <span className="material-symbols-outlined align-middle">person</span>
+                                            <span className="align-middle ms-2">{data?.autor_a}</span>
+                                        </div>
+                                        <div className='pb-2.5'>
+                                            <span className="material-symbols-outlined align-middle">event</span>
+                                            <span className="align-middle ms-2">{fecha}</span>
+                                        </div>
+                                        <Link className='text-red-700' href={`/files/${data?.archivo}.pdf`} target='_blank'>Leer...</Link>
+                                    </div>
+                                    <div className='w-[25%]'>
+                                        <Image src={`/images/${data?.archivo}.png`} alt="" className='border rounded' height={100} width={100} />
+                                    </div>
+                                </div>
+                            </>
+                            :
+                            <></>}
+                </div>
             </div>
         </div>
     );

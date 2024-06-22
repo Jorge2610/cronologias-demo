@@ -26,9 +26,15 @@ export default function RootLayout({
         <link rel="icon" href="/logo.png" sizes="any" />
       </head>
       <body className={inter.className}>
-        <Header />
-        <main className="flex ">{children}</main>
-        <Footer />
+        <div className="page-container">
+          <div className="content-wrap">
+            <Header />
+            <main className="flex ">{children}</main>
+          </div>
+          <div className="footer">
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );
