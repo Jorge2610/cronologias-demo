@@ -29,14 +29,14 @@ export default function Tarjeta({ data }: { data: TarjetaProps }) {
                 <div className="Resumen">
                     <span>{data.resumen}</span>
                 </div>
-                <div className="flex mt-[20px]">
+                <div className="flex mt-[15px]">
                     <span className="material-symbols-outlined">
                         calendar_month
                     </span>
                     <span className="mr-[50px] ms-2">{data.fecha.toLocaleDateString()}</span>
 
                     <Link className="text-red-700" href={`/cronologias/${data.titulo.toLowerCase().replace(":", "").replaceAll(" ", "_")}?id=${data.id}`}>
-                        Leer más...
+                        Ver cronología...
                     </Link>
                 </div>
 

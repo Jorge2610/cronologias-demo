@@ -28,7 +28,6 @@ export default function Cronologias() {
   const ordenar = () => {
     let auxTajetas = [...Tarjetas];
     ordenar1(auxTajetas);
-    console.log(auxTajetas);
     setTajetas(auxTajetas);
   }
   const ordenar1 = (lista: TarjetaProps[]) => {
@@ -90,12 +89,12 @@ export default function Cronologias() {
       <div className="Tarjetas">
         <hr className="border-[0.12rem] border-[#6B2236]  mx-auto my-2.5" />
         {Tarjetas.map(tarjeta => (
-          <>
+          <div key={tarjeta.id}>
             <Tarjeta
               data={tarjeta}
             />
             <hr className="border-[0.12rem] border-[#6B2236] mx-auto my-2.5" />
-          </>
+          </div>
 
         ))
         }

@@ -16,7 +16,7 @@ export const dastosIniciales: TarjetaProps[] = [
         titulo: "Intermezzo entre elecciones judiciales",
         imagen: "/images/Intermezzo.png",
         autor: "Neyer Zapata Vásquez",
-        fecha: new Date('2024-02-04'),
+        fecha: new Date('2024-2-4'),
         resumen: `Desde los juristas independientes hasta la autoprorróga, …
       … al enfrentamiento entre alas Arcista y Evista, …
       … a la alianza MAS-Evista-CC vs MAS-Arcista-TCP,…
@@ -33,7 +33,7 @@ export const dastosIniciales: TarjetaProps[] = [
         titulo: "Némesis de Morales, o acerca de Luis Fernando Camacho",
         imagen: "/images/Nemesis.png",
         autor: "Neyer Zapata Vázquez",
-        fecha: new Date('2024-02-22'),
+        fecha: new Date('2024-2-2'),
         resumen: `Biblia y carta en mano: elección presidencial y renuncia de Evo Morales. Camacho como Gobernador: censo, paro cívico y aprehensión. Santos inocentes... y directo a Chonchocoro. Santa Cruz en ausencia de su Gobernador: conflicto acerca de la suplencia`,
         archivo: "",
         autor_a: "",

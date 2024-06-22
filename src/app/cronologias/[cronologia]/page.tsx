@@ -12,7 +12,7 @@ export default function Cronologia({ params }: { params: { cronologia: string } 
     let id_param = searchParams.get('id');
     const id: number = id_param !== null ? parseInt(id_param) : -1;
     const data: TarjetaProps | undefined = dastosIniciales.find(tarjeta => tarjeta.id === id);
-    const fecha: string = data ? `${data.fecha.getDay()}/${data.fecha.getMonth()}/${data.fecha.getFullYear()}` : "";
+    const fecha: string | undefined = data?.fecha.toLocaleDateString();
     const recurso: string = `/files/${params.cronologia}.pdf`;
     const analisis: number = 1;
 
@@ -32,9 +32,8 @@ export default function Cronologia({ params }: { params: { cronologia: string } 
             <hr className="border border-[#6B2236] my-2.5" />
             <div className="flex flex-col sm:flex-row">
                 <iframe src={recurso} className="mx-auto w-[350px] sm:w-3/4 h-[490px] sm:h-[730px]"></iframe>
-                <div className="w-[350px] sm:min-w-[270px] ms-2.5 mt-2.5 sm:mt-0">
                     {data?.db !== "" ?
-                        <>
+                        <div className="w-[350px] sm:min-w-[270px] ms-2.5 mt-2.5 sm:mt-0">
                             <div className="sm:inline">
                                 <span className="material-symbols-outlined align-middle">database</span>
                                 <span className="align-middle ms-2 text-xl">
@@ -46,9 +45,9 @@ export default function Cronologia({ params }: { params: { cronologia: string } 
                                     </Link>
                                 </span>
                             </div>
-                        </>
+                        </div>
                         : data?.autor_a !== "" ?
-                            <>
+                            <div className="w-[350px] sm:min-w-[270px] ms-2.5 mt-2.5 sm:mt-0">
                                 <h2 className="text-xl mb-2.5">Documentos de análisis ({analisis})</h2>
                                 <div className="flex border-b border-[#6B2236]">
                                     <div className='w-[75%] ms-2 pb-2'>
@@ -66,11 +65,10 @@ export default function Cronologia({ params }: { params: { cronologia: string } 
                                         <Image src={`/images/${data?.archivo}.png`} alt="" className='border rounded' height={100} width={100} />
                                     </div>
                                 </div>
-                            </>
+                            </div>
                             :
                             <></>}
                 </div>
             </div>
-        </div>
     );
 };
